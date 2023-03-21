@@ -1,0 +1,103 @@
+<div class="card">
+    <div class="card-body mx-4">
+      <div class="container">
+      
+        <div class="row">
+          <!-- <ul class="list-unstyled">
+            <li class="text-black">John Doe</li>
+            <li class="text-muted mt-1"><span class="text-black">Invoice</span> #12345</li>
+            <li class="text-black mt-1">April 17 2021</li>
+          </ul> -->
+         
+          <div class="col-xl-10">
+            <p class="my-5 mx-5" style="font-size: 30px;">Saleem Traders</p>
+            <p>Address:Main Road Kohla District Okara</p>
+          </div>
+          <hr>
+          <div class="col-xl-10">
+            <p>Product Name</p>
+          </div>
+          <div class="col-xl-2">
+            <p class="float-end"><%=productList.productName%>
+            </p>
+          </div>
+          <hr>
+        </div>
+        <div class="row">
+          <div class="col-xl-10">
+            <p>Price</p>
+          </div>
+          <div class="col-xl-2">
+            <p class="float-end"><%=productList.price%>
+            </p>
+          </div>
+          <hr>
+        </div>
+        <div class="row">
+          <div class="col-xl-10">
+            <p>Quantity</p>
+          </div>
+          <div class="col-xl-2">
+            <p class="float-end"><%=productList.quantity%>
+            </p>
+          </div>
+          <hr style="border: 2px solid black;">
+        </div>
+        <div class="row text-black">
+  
+          <div class="col-xl-12">
+            <p class="float-end fw-bold">Total :<%=productList.amount%>
+            </p>
+          </div>
+          <hr style="border: 2px solid black;">
+        </div>
+        <div class="text-center" style="margin-top: 90px;">
+          <!-- <a><u class="text-info">View in browser</u></a>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p> -->
+        </div>
+  
+      </div>
+    </div>
+ 
+  </div>
+  <div class="btnprint">
+    <button class="print-button" onclick="printPage()">Print  </button>
+  </div>
+
+  <script>
+		function printPage() {
+			// Hide the button before printing
+			document.getElementsByClassName("print-button")[0].style.display = "none";
+			// Print the page
+			window.print();
+			// Show the button again after printing
+			document.getElementsByClassName("print-button")[0].style.display = "block";
+		}
+	</script>
+
+  <style>
+    .card{
+        display: flex;
+        justify-content: center;
+        
+    }
+  .btnprint{
+    display: flex;
+    justify-content: center;
+  }
+		.print-button {
+			padding: 10px 20px;
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			transition: background-color 0.3s;
+      text-align: center;
+		}
+		.print-button:hover {
+			background-color: #3e8e41;
+		}
+
+	
+  </style>
